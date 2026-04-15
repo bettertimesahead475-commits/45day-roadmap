@@ -72,3 +72,27 @@ body {
 }
 
 .button
+/* ICON LISTS */
+.card ul li {
+    position: relative;
+    padding-left: 22px;
+}
+
+.card ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #10B981;
+    font-weight: bold;
+}
+
+/* BUTTON ARROW */
+.button::after {
+    content: " →";
+    transition: margin-left 0.2s ease;
+}
+
+.button:hover::after {
+    margin-left: 4px;
+}
