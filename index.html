@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>45-Day CAS Action Plan — Ontario Parent Defense</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0c0f14;
+  --ink2:#141820;
+  --ink3:#1c2230;
+  --ink4:#243040;
+  --gold:#c9922a;
+  --gold-lt:#e8bc50;
+  --gold-dim:rgba(201,146,42,.12);
+  --gold-glow:rgba(232,188,80,.18);
+  --cream:#f5f0e8;
+  --cream2:#ede6d8;
+  --txt:#e8e4dc;
+  --txt2:#a8a49c;
+  --txt3:#68645e;
+  --red:#c94040;
+  --red-lt:#e86060;
+  --green:#3a8c5a;
+  --green-lt:#4aad70;
+  --border:rgba(255,255,255,.07);
+  --border2:rgba(255,255,255,.12);
+  --serif:'Crimson Pro',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --r:10px;
+}
+
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--txt);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh}
+
+/* ── LANDING ── */
+#landing{display:block}
+#app{display:none}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 24px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 900px 600px at 50% -10%,rgba(201,146,42,.18),transparent),radial-gradient(ellipse 600px 400px at 80% 80%,rgba(201,146,42,.08),transparent);pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold-lt);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:36px;background:rgba(201,146,42,.08)}
+.hero-badge span{width:6px;height:6px;background:var(--gold-lt);border-radius:50%;animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero h1{font-family:var(--serif);font-size:clamp(44px,7vw,82px);font-weight:300;line-height:1.08;color:#fff;max-width:900px;margin-bottom:8px;letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--gold-lt)}
+.hero-sub{font-size:clamp(16px,2vw,20px);color:var(--txt2);max-width:560px;margin:20px auto 0;line-height:1.6;font-weight:300}
+.hero-cta-group{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:48px}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:#0c0f14;font-family:var(--sans);font-weight:600;font-size:16px;border:none;padding:16px 40px;border-radius:var(--r);cursor:pointer;transition:all .2s;letter-spacing:.01em}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,146,42,.4)}
+.btn-ghost{background:transparent;color:var(--txt2);font-family:var(--sans);font-size:13px;border:1px solid var(--border2);padding:10px 24px;border-radius:var(--r);cursor:pointer;transition:all .2s}
+.btn-ghost:hover{color:var(--txt);border-color:var(--txt2)}
+.hero-proof{margin-top:60px;font-size:12px;color:var(--txt3);letter-spacing:.04em}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--txt3);font-size:11px;letter-spacing:.06em;text-transform:uppercase;animation:bob 2s ease infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+.scroll-arrow{width:18px;height:18px;border-right:1.5px solid var(--txt3);border-bottom:1.5px solid var(--txt3);transform:rotate(45deg)}
+
+/* STATS BAR */
+.stats-bar{background:var(--ink2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:28px 24px}
+.stats-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.stat{text-align:center;padding:0 24px;position:relative}
+.stat+.stat::before{content:'';position:absolute;left:0;top:20%;height:60%;width:1px;background:var(--border)}
+.stat-num{font-family:var(--serif);font-size:38px;font-weight:600;color:var(--gold-lt);line-height:1}
+.stat-lbl{font-size:12px;color:var(--txt3);margin-top:4px;letter-spacing:.03em}
+
+/* SECTION */
+.section{padding:80px 24px;max-width:1000px;margin:0 auto}
+.section-eyebrow{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.section-title{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:400;color:#fff;line-height:1.12;letter-spacing:-.01em}
+.section-title em{font-style:italic;color:var(--gold-lt)}
+
+/* WHAT YOU GET */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:48px}
+.feat{background:var(--ink2);border:1px solid var(--border);border-radius:var(--r);padding:28px;position:relative;overflow:hidden;transition:border-color .2s}
+.feat:hover{border-color:rgba(201,146,42,.3)}
+.feat::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--gold-dim),transparent);opacity:0;transition:opacity .2s}
+.feat:hover::before{opacity:1}
+.feat-icon{font-size:26px;margin-bottom:14px}
+.feat-title{font-family:var(--serif);font-size:20px;font-weight:600;color:#fff;margin-bottom:8px}
+.feat-desc{font-size:13px;color:var(--txt2);line-height:1.6}
+
+/* TIMELINE PREVIEW */
+.timeline-preview{margin-top:48px;display:flex;flex-direction:column;gap:0}
+.tl-phase{display:flex;gap:20px;position:relative}
+.tl-phase::before{content:'';position:absolute;left:19px;top:40px;bottom:-1px;width:1px;background:var(--border)}
+.tl-phase:last-child::before{display:none}
+.tl-dot{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0;border:1px solid}
+.tl-dot.red{background:rgba(201,64,64,.15);border-color:var(--red);color:var(--red-lt)}
+.tl-dot.gold{background:var(--gold-dim);border-color:var(--gold);color:var(--gold-lt)}
+.tl-dot.green{background:rgba(58,140,90,.15);border-color:var(--green);color:var(--green-lt)}
+.tl-body{padding:8px 0 32px}
+.tl-days{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--txt3);margin-bottom:4px}
+.tl-title{font-family:var(--serif);font-size:22px;color:#fff;margin-bottom:6px}
+.tl-desc{font-size:13px;color:var(--txt2);line-height:1.6}
+
+/* TESTIMONIALS */
+.testimonials{background:var(--ink2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:80px 24px}
+.testimonials-inner{max-width:900px;margin:0 auto}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:40px}
+.testi{background:var(--ink3);border:1px solid var(--border);border-radius:var(--r);padding:24px}
+.testi-stars{color:var(--gold-lt);font-size:14px;margin-bottom:12px;letter-spacing:2px}
+.testi-text{font-family:var(--serif);font-size:17px;font-style:italic;color:var(--txt);line-height:1.6;margin-bottom:16px}
+.testi-name{font-size:12px;color:var(--txt3);font-weight:500;letter-spacing:.04em}
+
+/* PRICING */
+.pricing-wrap{max-width:520px;margin:48px auto 0}
+.price-card{background:var(--ink2);border:1px solid var(--gold);border-radius:16px;padding:40px 36px;text-align:center;position:relative;overflow:hidden}
+.price-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold-lt),transparent)}
+.price-badge{display:inline-block;background:var(--gold-dim);border:1px solid var(--gold);color:var(--gold-lt);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:4px 14px;border-radius:100px;margin-bottom:20px}
+.price-name{font-family:var(--serif);font-size:28px;color:#fff;margin-bottom:4px}
+.price-amt{font-family:var(--serif);font-size:64px;font-weight:600;color:var(--gold-lt);line-height:1;margin:12px 0 4px}
+.price-period{font-size:13px;color:var(--txt3);margin-bottom:24px}
+.price-features{list-style:none;text-align:left;margin-bottom:32px;display:flex;flex-direction:column;gap:10px}
+.price-features li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--txt2)}
+.price-features li::before{content:'✓';color:var(--green-lt);font-weight:700;flex-shrink:0;margin-top:1px}
+.price-note{font-size:12px;color:var(--txt3);margin-top:14px}
+
+/* PAYMENT MODAL */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:200;align-items:center;justify-content:center;padding:20px}
+.modal-bg.open{display:flex}
+.modal{background:var(--ink2);border:1px solid var(--border2);border-radius:16px;padding:40px;max-width:480px;width:100%;max-height:90vh;overflow-y:auto}
+.modal h2{font-family:var(--serif);font-size:30px;color:#fff;margin-bottom:6px}
+.modal-sub{font-size:14px;color:var(--txt2);margin-bottom:28px;line-height:1.6}
+.pay-step{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border)}
+.pay-step:last-of-type{border-bottom:none}
+.pay-num{width:28px;height:28px;border-radius:50%;background:var(--gold-dim);border:1px solid var(--gold);color:var(--gold-lt);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pay-body{flex:1}
+.pay-label{font-size:12px;font-weight:600;color:var(--txt3);letter-spacing:.04em;text-transform:uppercase;margin-bottom:3px}
+.pay-val{font-size:14px;color:var(--txt)}
+.pay-em{font-family:monospace;background:var(--ink3);border:1px solid var(--border2);padding:6px 12px;border-radius:6px;font-size:14px;color:var(--gold-lt);display:inline-block;margin-top:4px;word-break:break-all;user-select:all}
+.modal-divider{height:1px;background:var(--border);margin:24px 0}
+.modal h3{font-family:var(--serif);font-size:20px;color:#fff;margin-bottom:12px}
+.unlock-row{display:flex;gap:10px}
+.unlock-input{flex:1;background:var(--ink3);border:1px solid var(--border2);color:#fff;font-family:var(--sans);font-size:15px;padding:12px 16px;border-radius:var(--r);outline:none;transition:border-color .2s;letter-spacing:.06em;text-transform:uppercase}
+.unlock-input:focus{border-color:var(--gold)}
+.btn-unlock{background:linear-gradient(135deg,var(--gold),var(--gold-lt));color:#0c0f14;font-weight:700;font-size:14px;border:none;padding:12px 20px;border-radius:var(--r);cursor:pointer;white-space:nowrap;transition:all .2s}
+.btn-unlock:hover{transform:translateY(-1px)}
+.unlock-err{font-size:12px;color:var(--red-lt);margin-top:8px;display:none}
+.modal-close{background:none;border:1px solid var(--border);color:var(--txt2);font-family:var(--sans);font-size:13px;padding:10px 20px;border-radius:var(--r);cursor:pointer;margin-top:16px;width:100%;transition:all .2s}
+.modal-close:hover{border-color:var(--txt2);color:var(--txt)}
+
+/* FOOTER */
+.site-footer{background:var(--ink2);border-top:1px solid var(--border);padding:36px 24px;text-align:center}
+.site-footer p{font-size:12px;color:var(--txt3);line-height:1.8}
+
+/* ── APP (ROADMAP TOOL) ── */
+.app-header{background:var(--ink2);border-bottom:1px solid var(--border);padding:0 20px;height:56px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:50}
+.app-logo{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--gold-lt)}
+.app-logo span{font-style:italic;font-weight:300}
+.app-right{margin-left:auto;display:flex;align-items:center;gap:12px}
+.prog-wrap{display:flex;align-items:center;gap:10px}
+.prog-bar{width:120px;height:6px;background:var(--ink4);border-radius:3px;overflow:hidden}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-lt));border-radius:3px;transition:width .4s ease;width:0%}
+.prog-txt{font-size:12px;color:var(--txt2);white-space:nowrap}
+.btn-back{background:none;border:1px solid var(--border);color:var(--txt3);font-family:var(--sans);font-size:12px;padding:6px 14px;border-radius:6px;cursor:pointer}
+.btn-back:hover{color:var(--txt);border-color:var(--txt2)}
+
+.app-body{max-width:960px;margin:0 auto;padding:32px 20px 80px}
+.app-hero{background:var(--ink2);border:1px solid var(--border);border-radius:14px;padding:32px;margin-bottom:28px;position:relative;overflow:hidden}
+.app-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 200px at 50% 0,var(--gold-glow),transparent);pointer-events:none}
+.app-hero h1{font-family:var(--serif);font-size:clamp(24px,4vw,36px);color:#fff;margin-bottom:6px;font-weight:400}
+.app-hero p{font-size:14px;color:var(--txt2);max-width:580px;line-height:1.6}
+.day-counter{display:inline-flex;align-items:center;gap:8px;background:var(--ink3);border:1px solid var(--border);border-radius:8px;padding:6px 14px;font-size:13px;color:var(--txt2);margin-top:16px}
+.day-counter strong{color:var(--gold-lt)}
+
+.tabs{display:flex;gap:6px;margin-bottom:24px;flex-wrap:wrap}
+.tab{background:var(--ink2);border:1px solid var(--border);color:var(--txt2);font-family:var(--sans);font-size:13px;padding:8px 16px;border-radius:8px;cursor:pointer;transition:all .15s;white-space:nowrap}
+.tab:hover{color:var(--txt);border-color:var(--border2)}
+.tab.active{background:var(--gold-dim);border-color:var(--gold);color:var(--gold-lt);font-weight:500}
+
+.panel{display:none}
+.panel.active{display:block}
+
+.phase-header{margin-bottom:20px}
+.phase-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:10px;border:1px solid}
+.phase-badge.red{background:rgba(201,64,64,.1);border-color:var(--red);color:var(--red-lt)}
+.phase-badge.gold{background:var(--gold-dim);border-color:var(--gold);color:var(--gold-lt)}
+.phase-badge.green{background:rgba(58,140,90,.1);border-color:var(--green);color:var(--green-lt)}
+.phase-badge.blue{background:rgba(60,120,200,.1);border-color:#3c78c8;color:#80b0f0}
+.phase-title{font-family:var(--serif);font-size:28px;color:#fff;margin-bottom:6px;font-weight:400}
+.phase-desc{font-size:14px;color:var(--txt2);line-height:1.6;max-width:680px}
+
+.checklist{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.check-item{background:var(--ink2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;display:flex;align-items:flex-start;gap:12px;cursor:pointer;transition:all .15s}
+.check-item:hover{border-color:var(--border2)}
+.check-item.done{background:rgba(58,140,90,.06);border-color:rgba(58,140,90,.25)}
+.check-item input[type=checkbox]{width:18px;height:18px;accent-color:var(--green-lt);flex-shrink:0;margin-top:1px;cursor:pointer}
+.check-body{flex:1}
+.check-title{font-size:14px;font-weight:500;color:var(--txt);margin-bottom:2px}
+.check-item.done .check-title{color:var(--txt3);text-decoration:line-through}
+.check-note{font-size:12px;color:var(--txt3);line-height:1.5}
+.check-tag{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:4px;display:inline-block;margin-top:4px;border:1px solid}
+.check-tag.urgent{background:rgba(201,64,64,.1);border-color:var(--red);color:var(--red-lt)}
+.check-tag.legal{background:var(--gold-dim);border-color:var(--gold);color:var(--gold-lt)}
+.check-tag.document{background:rgba(60,120,200,.1);border-color:#3c78c8;color:#80b0f0}
+
+.alert-box{background:rgba(201,64,64,.08);border:1px solid rgba(201,64,64,.3);border-radius:var(--r);padding:16px 18px;margin:16px 0;display:flex;gap:12px;align-items:flex-start}
+.alert-icon{font-size:18px;flex-shrink:0}
+.alert-body{font-size:13px;color:var(--txt2);line-height:1.6}
+.alert-body strong{color:var(--txt)}
+
+.info-box{background:var(--gold-dim);border:1px solid rgba(201,146,42,.3);border-radius:var(--r);padding:16px 18px;margin:16px 0;font-size:13px;color:var(--txt2);line-height:1.6}
+.info-box strong{color:var(--gold-lt)}
+
+.section-break{height:1px;background:var(--border);margin:28px 0}
+
+.script-box{background:var(--ink3);border:1px solid var(--border2);border-radius:var(--r);padding:18px;margin-top:14px;font-family:var(--serif);font-size:15px;font-style:italic;color:var(--txt2);line-height:1.8;position:relative}
+.script-label{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--txt3);margin-bottom:8px;font-style:normal}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .stats-inner{grid-template-columns:1fr;gap:20px}
+  .stat+.stat::before{display:none}
+  .stat+.stat{border-top:1px solid var(--border);padding-top:20px}
+  .hero h1{font-size:36px}
+  .modal{padding:28px 20px}
+  .price-amt{font-size:48px}
+  .tabs{gap:4px}
+  .tab{font-size:12px;padding:6px 12px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ LANDING PAGE ══════════ -->
+<div id="landing">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge"><span></span>Ontario Parent Defense — Tactical Guide</div>
+  <h1>Your first 45 days<br><em>will define everything.</em></h1>
+  <p class="hero-sub">A step-by-step action plan for Ontario parents facing a CAS investigation. Know exactly what to do — and when — from Day 1 to Day 45.</p>
+  <div class="hero-cta-group">
+    <button class="btn-gold" onclick="openModal()">Get the Roadmap — $14.99 CAD</button>
+    <button class="btn-ghost" onclick="document.getElementById('preview').scrollIntoView({behavior:'smooth'})">See what's inside ↓</button>
+  </div>
+  <p class="hero-proof">One-time purchase · Instant digital delivery · No subscription</p>
+  <div class="hero-scroll"><div class="scroll-arrow"></div></div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-num">45</div>
+      <div class="stat-lbl">Days Covered</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">6</div>
+      <div class="stat-lbl">Critical Phases</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">80+</div>
+      <div class="stat-lbl">Action Items</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT YOU GET -->
+<div class="section" id="preview">
+  <div class="section-eyebrow">What's inside</div>
+  <div class="section-title">Every phase.<br><em>Every action.</em> Nothing missed.</div>
+  <div class="features-grid">
+    <div class="feat">
+      <div class="feat-icon">🚨</div>
+      <div class="feat-title">Days 1–5: Emergency Protocol</div>
+      <div class="feat-desc">The 5-day rule, who to call first, what to say and what never to say. The first 5 days are the most critical — don't guess.</div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📞</div>
+      <div class="feat-title">Days 6–15: Investigation Phase</div>
+      <div class="feat-desc">How to handle CAS worker contact, home visits, interviews, and voluntary service agreements — on your terms.</div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">⚖️</div>
+      <div class="feat-title">Days 16–30: Court Preparation</div>
+      <div class="feat-desc">Gathering evidence, building your timeline, finding legal aid, and understanding what happens at a protection hearing.</div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📋</div>
+      <div class="feat-title">Days 31–45: Strategic Positioning</div>
+      <div class="feat-desc">Access agreements, service plan responses, preparing affidavits, and positioning for the best outcome.</div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📌</div>
+      <div class="feat-title">Progress Tracker</div>
+      <div class="feat-desc">Check off each action item as you complete it. Your progress saves automatically — pick up right where you left off.</div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📝</div>
+      <div class="feat-title">Word-for-Word Scripts</div>
+      <div class="feat-desc">Exact language for calls, home visits, and worker interviews. Know what to say before they knock on your door.</div>
+    </div>
+  </div>
+</div>
+
+<!-- TIMELINE PREVIEW -->
+<div style="background:var(--ink2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:80px 24px">
+  <div style="max-width:700px;margin:0 auto">
+    <div class="section-eyebrow">Phase overview</div>
+    <div class="section-title" style="margin-bottom:40px">The 45-day<br><em>battle map</em></div>
+    <div class="timeline-preview">
+      <div class="tl-phase">
+        <div class="tl-dot red">1</div>
+        <div class="tl-body">
+          <div class="tl-days">Days 1–5</div>
+          <div class="tl-title">Crisis & Emergency Response</div>
+          <div class="tl-desc">Immediate actions after CAS contact or removal. The 5-day rule, legal aid calls, documentation starts now.</div>
+        </div>
+      </div>
+      <div class="tl-phase">
+        <div class="tl-dot red">2</div>
+        <div class="tl-body">
+          <div class="tl-days">Days 6–15</div>
+          <div class="tl-title">Investigation Management</div>
+          <div class="tl-desc">Navigating worker visits, protecting your rights during questioning, voluntary agreements and what to avoid signing.</div>
+        </div>
+      </div>
+      <div class="tl-phase">
+        <div class="tl-dot gold">3</div>
+        <div class="tl-body">
+          <div class="tl-days">Days 16–25</div>
+          <div class="tl-title">Evidence & Documentation</div>
+          <div class="tl-desc">Building your paper trail, gathering supportive evidence, medical records, witness statements, and communications log.</div>
+        </div>
+      </div>
+      <div class="tl-phase">
+        <div class="tl-dot gold">4</div>
+        <div class="tl-body">
+          <div class="tl-days">Days 26–35</div>
+          <div class="tl-title">Legal Strategy & Court Prep</div>
+          <div class="tl-desc">Understanding the protection application, your response options, what to expect at a hearing, how to work with your lawyer.</div>
+        </div>
+      </div>
+      <div class="tl-phase">
+        <div class="tl-dot green">5</div>
+        <div class="tl-body">
+          <div class="tl-days">Days 36–45</div>
+          <div class="tl-title">Positioning for the Best Outcome</div>
+          <div class="tl-desc">Service plan response, access arrangements, demonstrating parental capacity, and preparing your sworn affidavit.</div>
+        </div>
+      </div>
+      <div class="tl-phase">
+        <div class="tl-dot green">6</div>
+        <div class="tl-body">
+          <div class="tl-days">Ongoing</div>
+          <div class="tl-title">Long-Term Defense Foundation</div>
+          <div class="tl-desc">Maintaining records, attending programs, communicating with CAS in writing, and protecting your relationship with your child.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="testimonials">
+  <div class="testimonials-inner">
+    <div class="section-eyebrow">From Ontario parents</div>
+    <div class="section-title"><em>Real stories,</em> real outcomes</div>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"I had no idea what the 5-day rule was. By the time I found out, I'd already missed key steps. This roadmap would have changed everything."</div>
+        <div class="testi-name">— Mother, Elgin County</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"Having a checklist to follow when I was panicking was exactly what I needed. I stopped reacting and started responding strategically."</div>
+        <div class="testi-name">— Father, Hamilton</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">"The scripts for CAS phone calls alone were worth it. I knew exactly what to say and what not to say. That's priceless information."</div>
+        <div class="testi-name">— Parent, Ottawa</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="section" style="padding-bottom:100px">
+  <div class="section-eyebrow" style="text-align:center">Pricing</div>
+  <div class="section-title" style="text-align:center">Less than one hour<br><em>of paralegal time.</em></div>
+  <div class="pricing-wrap">
+    <div class="price-card">
+      <div class="price-badge">One-Time Purchase</div>
+      <div class="price-name">45-Day CAS Roadmap</div>
+      <div class="price-amt">$14.99</div>
+      <div class="price-period">CAD · One-time · No subscription ever</div>
+      <ul class="price-features">
+        <li>Complete 45-day phase-by-phase plan</li>
+        <li>80+ action items with checkboxes</li>
+        <li>Progress tracking saves automatically</li>
+        <li>Word-for-word scripts for CAS interactions</li>
+        <li>Charter rights reference per phase</li>
+        <li>Urgent vs. legal vs. document prioritization</li>
+        <li>Works offline on any device</li>
+        <li>Yours to keep forever</li>
+      </ul>
+      <button class="btn-gold" style="width:100%;font-size:16px;padding:18px" onclick="openModal()">Get Instant Access</button>
+      <p class="price-note">Pay by Interac e-Transfer · Access code sent within 24 hrs</p>
+    </div>
+  </div>
+</div>
+
+<div class="site-footer">
+  <p><strong style="color:var(--txt2)">Ontario Parent Defense</strong></p>
+  <p>Educational information only. Not legal advice. Always consult a qualified Ontario family law lawyer for advice about your specific situation.</p>
+  <p style="margin-top:8px">Questions? Email <span style="color:var(--gold-lt)">ontarioparentassist@gmail.com</span></p>
+</div>
+
+</div><!-- end #landing -->
+
+<!-- ══════════ PAYMENT MODAL ══════════ -->
+<div class="modal-bg" id="modalBg" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h2>Get Your Roadmap</h2>
+    <p class="modal-sub">Send your payment by Interac e-Transfer — your unlock code arrives by email within 24 hours.</p>
+
+    <div class="pay-step">
+      <div class="pay-num">1</div>
+      <div class="pay-body">
+        <div class="pay-label">Amount to send</div>
+        <div class="pay-val"><strong style="color:#fff;font-size:18px">$14.99 CAD</strong></div>
+      </div>
+    </div>
+    <div class="pay-step">
+      <div class="pay-num">2</div>
+      <div class="pay-body">
+        <div class="pay-label">Send e-Transfer to</div>
+        <div class="pay-em" onclick="copyEmail(this)">ontarioparentassist@gmail.com</div>
+        <div style="font-size:11px;color:var(--txt3);margin-top:4px">Tap to copy</div>
+      </div>
+    </div>
+    <div class="pay-step">
+      <div class="pay-num">3</div>
+      <div class="pay-body">
+        <div class="pay-label">Message field (required)</div>
+        <div class="pay-val" style="font-size:13px;color:var(--txt2)">Include your email address + "45-Day Roadmap"</div>
+      </div>
+    </div>
+    <div class="pay-step">
+      <div class="pay-num">4</div>
+      <div class="pay-body">
+        <div class="pay-label">Receive your code</div>
+        <div class="pay-val" style="font-size:13px;color:var(--txt2)">Your access code arrives by email within 24 hours of confirmed payment</div>
+      </div>
+    </div>
+
+    <div class="modal-divider"></div>
+
+    <h3>Already have a code?</h3>
+    <div class="unlock-row">
+      <input class="unlock-input" id="codeInput" type="text" placeholder="ENTER CODE" maxlength="20" oninput="this.value=this.value.toUpperCase()" onkeydown="if(event.key==='Enter')tryUnlock()">
+      <button class="btn-unlock" onclick="tryUnlock()">Unlock →</button>
+    </div>
+    <div class="unlock-err" id="unlockErr">Incorrect code. Check your email and try again.</div>
+
+    <button class="modal-close" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<!-- ══════════ APP (ROADMAP) ══════════ -->
+<div id="app">
+  <div class="app-header">
+    <div class="app-logo">45-Day <em>CAS Roadmap</em></div>
+    <div class="app-right">
+      <div class="prog-wrap">
+        <div class="prog-bar"><div class="prog-fill" id="progFill"></div></div>
+        <div class="prog-txt" id="progTxt">0% complete</div>
+      </div>
+      <button class="btn-back" onclick="backToLanding()">← Back</button>
+    </div>
+  </div>
+
+  <div class="app-body">
+    <div class="app-hero">
+      <h1>Your 45-Day Action Plan</h1>
+      <p>Work through each phase in order. Check off items as you complete them — your progress saves automatically to this device.</p>
+      <div class="day-counter">Day tracker: <strong id="dayDisplay">Day 0 of 45</strong></div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('phase1',this)">🚨 Days 1–5</button>
+      <button class="tab" onclick="switchTab('phase2',this)">📞 Days 6–15</button>
+      <button class="tab" onclick="switchTab('phase3',this)">📄 Days 16–25</button>
+      <button class="tab" onclick="switchTab('phase4',this)">⚖️ Days 26–35</button>
+      <button class="tab" onclick="switchTab('phase5',this)">🎯 Days 36–45</button>
+      <button class="tab" onclick="switchTab('phase6',this)">📌 Ongoing</button>
+    </div>
+
+    <!-- PHASE 1 -->
+    <div class="panel active" id="panel-phase1">
+      <div class="phase-header">
+        <div class="phase-badge red">🚨 Phase 1</div>
+        <div class="phase-title">Days 1–5: Emergency Response</div>
+        <div class="phase-desc">The first five days are the most consequential of your entire case. Every action or inaction here echoes forward. Move fast, stay calm, document everything.</div>
+      </div>
+      <div class="alert-box">
+        <div class="alert-icon">⚠️</div>
+        <div class="alert-body"><strong>If your child has been removed:</strong> CAS must bring you to court within 5 days. This is the law — CYFSA s.75. Do not wait for them to call you. Call Legal Aid Ontario immediately: <strong>1-800-668-8258</strong></div>
+      </div>
+      <div class="checklist">
+        <label class="check-item" id="ci-p1-1"><input type="checkbox"><div class="check-body"><div class="check-title">Call Legal Aid Ontario: 1-800-668-8258</div><div class="check-note">Do this before any other step. Get a certificate number if eligible. If not eligible, request a referral to duty counsel or Legal Aid clinics.</div><span class="check-tag urgent">URGENT</span></div></label>
+        <label class="check-item" id="ci-p1-2"><input type="checkbox"><div class="check-body"><div class="check-title">Write down every CAS worker's name, badge number, and what they said — word for word</div><div class="check-note">Use your phone's notes app. Include the date, time, location, and who else was present. This becomes evidence.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p1-3"><input type="checkbox"><div class="check-body"><div class="check-title">Do NOT sign anything without reading it completely and ideally without legal advice</div><div class="check-note">Voluntary Service Agreements, safety plans, temporary care agreements — all have legal weight. "Voluntary" still affects your file.</div><span class="check-tag legal">LEGAL</span></div></label>
+        <label class="check-item" id="ci-p1-4"><input type="checkbox"><div class="check-body"><div class="check-title">Record every visit and phone call (with notice to the other party, or check single-party consent rules)</div><div class="check-note">Ontario is a single-party consent province for recordings. You can record calls you are a party to. Always state clearly "I am recording this conversation."</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p1-5"><input type="checkbox"><div class="check-body"><div class="check-title">Contact a trusted support person — family, friend, community member — to be present at all CAS interactions</div><div class="check-note">You have the right to have a support person present. This creates a witness and helps you stay grounded.</div><span class="check-tag legal">LEGAL</span></div></label>
+        <label class="check-item" id="ci-p1-6"><input type="checkbox"><div class="check-body"><div class="check-title">Start a physical log / journal with dated entries</div><div class="check-note">Write down everything. Who called, who visited, what was said, what was requested. Courts value contemporaneous notes.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p1-7"><input type="checkbox"><div class="check-body"><div class="check-title">Ask CAS in writing: "What are the specific concerns?" and "What outcome are you looking for?"</div><div class="check-note">Get the allegations in writing. You can't respond to vague concerns. This also creates a paper trail of them defining the issue.</div><span class="check-tag legal">LEGAL</span></div></label>
+      </div>
+
+      <div class="section-break"></div>
+      <p style="font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--txt3);margin-bottom:10px">Script: First CAS phone call</p>
+      <div class="script-box">
+        <div class="script-label">Use these words</div>
+        "I want to cooperate with your concerns. Before we go any further, I'm going to need everything in writing. I am also going to be consulting with a lawyer before I agree to anything or make any statements. Can you confirm your name, your worker number, and your direct phone number? I am writing this down."
+      </div>
+
+      <div class="info-box" style="margin-top:20px">
+        <strong>Know your Charter rights:</strong> You have the right to be free from unreasonable search and seizure (s.8), the right not to be arbitrarily detained (s.9), and the right to life, liberty and security of the person (s.7). CAS cannot enter your home without consent or a court order — unless they believe a child is in immediate danger.
+      </div>
+    </div>
+
+    <!-- PHASE 2 -->
+    <div class="panel" id="panel-phase2">
+      <div class="phase-header">
+        <div class="phase-badge red">📞 Phase 2</div>
+        <div class="phase-title">Days 6–15: Investigation Management</div>
+        <div class="phase-desc">CAS is gathering information. This is where many parents inadvertently harm their own case. Every word, every gesture, every missed call is being noted.</div>
+      </div>
+      <div class="checklist">
+        <label class="check-item" id="ci-p2-1"><input type="checkbox"><div class="check-body"><div class="check-title">Request all communications from CAS in writing (email or letter)</div><div class="check-note">Tell them: "Going forward, please communicate with me in writing so we have an accurate record. My email is [your email]."</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p2-2"><input type="checkbox"><div class="check-body"><div class="check-title">Review and understand any safety plan you signed — know every condition</div><div class="check-note">Safety plan violations can be used against you in court. Know exactly what you agreed to, and follow it precisely.</div><span class="check-tag legal">LEGAL</span></div></label>
+        <label class="check-item" id="ci-p2-3"><input type="checkbox"><div class="check-body"><div class="check-title">Cooperate with scheduled home visits — have your support person present</div><div class="check-note">Refusing visits without reason looks bad. Cooperate but document. Have your support person present and note everything that's observed or said.</div><span class="check-tag urgent">IMPORTANT</span></div></label>
+        <label class="check-item" id="ci-p2-4"><input type="checkbox"><div class="check-body"><div class="check-title">Keep a log of every interaction — date, time, duration, worker name, what was said</div><div class="check-note">Your notes vs. their notes. Make yours more detailed. Courts review contemporaneous records carefully.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p2-5"><input type="checkbox"><div class="check-body"><div class="check-title">Do not discuss your case with other CAS clients, third parties, or on social media</div><div class="check-note">Anything you say can and does get back to CAS workers. Social media posts have been used as evidence. Lock down all accounts.</div><span class="check-tag legal">LEGAL</span></div></label>
+        <label class="check-item" id="ci-p2-6"><input type="checkbox"><div class="check-body"><div class="check-title">Voluntarily enroll in any helpful programs NOW — parenting courses, counselling, etc.</div><div class="check-note">Proactive engagement shows good faith and looks far better than waiting to be ordered. Keep all completion certificates.</div><span class="check-tag urgent">IMPORTANT</span></div></label>
+        <label class="check-item" id="ci-p2-7"><input type="checkbox"><div class="check-body"><div class="check-title">Gather character references — teachers, doctors, coaches, community members who know you as a parent</div><div class="check-note">Written letters from people who've observed your parenting are powerful. Start asking now while everything is fresh.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p2-8"><input type="checkbox"><div class="check-body"><div class="check-title">Request disclosure — ask to see what CAS has on file about your family</div><div class="check-note">Under CYFSA s.312, you have rights to see your file. Ask your lawyer to request full disclosure. You can't respond to what you can't see.</div><span class="check-tag legal">LEGAL</span></div></label>
+      </div>
+      <div class="section-break"></div>
+      <div class="script-box">
+        <div class="script-label">Script: Responding to a home visit request</div>
+        "Yes, I'm available on [date]. I'll have a support person present. For my records, can you confirm in writing what the purpose of this visit is and what you'll be looking at? I want to make sure I have everything ready for you."
+      </div>
+    </div>
+
+    <!-- PHASE 3 -->
+    <div class="panel" id="panel-phase3">
+      <div class="phase-header">
+        <div class="phase-badge gold">📄 Phase 3</div>
+        <div class="phase-title">Days 16–25: Evidence & Documentation</div>
+        <div class="phase-desc">Build your evidentiary foundation. Courts decide based on evidence, not emotion. Everything you gather now becomes part of your defense.</div>
+      </div>
+      <div class="checklist">
+        <label class="check-item" id="ci-p3-1"><input type="checkbox"><div class="check-body"><div class="check-title">Request your child's medical, school, and therapy records</div><div class="check-note">Records showing your involvement — appointments attended, meetings attended, communications with teachers — demonstrate engaged parenting.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p3-2"><input type="checkbox"><div class="check-body"><div class="check-title">Compile a timeline of events from your perspective — dates, facts, your response</div><div class="check-note">A written timeline helps courts understand the context. Keep it factual and specific. No editorializing.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p3-3"><input type="checkbox"><div class="check-body"><div class="check-title">Collect text messages, emails, and voicemails that support your position — screenshot and back up everything</div><div class="check-note">Take screenshots with timestamps visible. Back up to cloud storage. Communications showing you trying to do right by your child matter.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p3-4"><input type="checkbox"><div class="check-body"><div class="check-title">Get written character reference letters — at least 3</div><div class="check-note">References from professionals carry more weight (doctor, teacher, counsellor). Letter should describe specific observations of your parenting.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p3-5"><input type="checkbox"><div class="check-body"><div class="check-title">Document your housing, employment, and support network in writing</div><div class="check-note">Stable housing, income, family support all factor into parental capacity assessments. Have current proof of all three.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p3-6"><input type="checkbox"><div class="check-body"><div class="check-title">Review any CAS affidavit or protection application line by line — note every error, mischaracterization, hearsay</div><div class="check-note">CAS affidavits often contain opinion framed as fact, hearsay, and inaccuracies. Your lawyer needs a line-by-line rebuttal.</div><span class="check-tag legal">LEGAL</span></div></label>
+        <label class="check-item" id="ci-p3-7"><input type="checkbox"><div class="check-body"><div class="check-title">Identify any Charter violations in CAS conduct and document them</div><div class="check-note">Unlawful entry, failure to provide reasons, violation of your s.7 rights — document these for your lawyer. They can be raised in court.</div><span class="check-tag legal">LEGAL</span></div></label>
+      </div>
+    </div>
+
+    <!-- PHASE 4 -->
+    <div class="panel" id="panel-phase4">
+      <div class="phase-header">
+        <div class="phase-badge gold">⚖️ Phase 4</div>
+        <div class="phase-title">Days 26–35: Legal Strategy & Court Prep</div>
+        <div class="phase-desc">If this is heading to court, you need to understand the process and be prepared. Even with a lawyer, the more you know, the better positioned you are.</div>
+      </div>
+      <div class="checklist">
+        <label class="check-item" id="ci-p4-1"><input type="checkbox"><div class="check-body"><div class="check-title">Confirm your next court date and the nature of the appearance (status review, protection hearing, motion)</div><div class="check-note">Know what type of hearing it is. Each has different rules, purposes, and outcomes. Ask your lawyer to explain each one clearly.</div><span class="check-tag legal">LEGAL</span></div></label>
+        <label class="check-item" id="ci-p4-2"><input type="checkbox"><div class="check-body"><div class="check-title">Review all disclosure received from CAS — note dates, inconsistencies, missing documents</div><div class="check-note">If something you know exists isn't in the disclosure, request it specifically in writing. "Where is the investigation notes from [date]?"</div><span class="check-tag legal">LEGAL</span></div></label>
+        <label class="check-item" id="ci-p4-3"><input type="checkbox"><div class="check-body"><div class="check-title">Prepare your cross-examination questions for each CAS witness</div><div class="check-note">Your lawyer does the cross, but you know the facts they don't. Give your lawyer a list of questions and contradictions to explore for each worker.</div><span class="check-tag legal">LEGAL</span></div></label>
+        <label class="check-item" id="ci-p4-4"><input type="checkbox"><div class="check-body"><div class="check-title">Draft your own affidavit with your lawyer — your version of events in your own words</div><div class="check-note">Your affidavit is your sworn statement to the court. It must be factual, organized, and address the specific concerns raised by CAS.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p4-5"><input type="checkbox"><div class="check-body"><div class="check-title">Understand the access order or plan — know your scheduled time with your child and exercise all of it</div><div class="check-note">Not showing up for scheduled access, for any reason, is noted and used against you. If you can't make it, give advance written notice.</div><span class="check-tag urgent">IMPORTANT</span></div></label>
+        <label class="check-item" id="ci-p4-6"><input type="checkbox"><div class="check-body"><div class="check-title">Review the legal test for protection findings — understand what CAS must prove</div><div class="check-note">Under CYFSA s.74, CAS must prove a child is or is likely to be in need of protection. They have the burden of proof. Know what they need to establish.</div><span class="check-tag legal">LEGAL</span></div></label>
+      </div>
+      <div class="section-break"></div>
+      <div class="info-box">
+        <strong>Key legal standard:</strong> Under CYFSA s.74(2), CAS must establish that the child is or is likely to be in need of protection on a balance of probabilities. You do not have to prove you're a perfect parent — you need to establish that the risk alleged doesn't meet the legal threshold.
+      </div>
+    </div>
+
+    <!-- PHASE 5 -->
+    <div class="panel" id="panel-phase5">
+      <div class="phase-header">
+        <div class="phase-badge green">🎯 Phase 5</div>
+        <div class="phase-title">Days 36–45: Strategic Positioning</div>
+        <div class="phase-desc">By now you've built your foundation. These final days before the critical hearing window are about presenting the strongest version of yourself and your parenting.</div>
+      </div>
+      <div class="checklist">
+        <label class="check-item" id="ci-p5-1"><input type="checkbox"><div class="check-body"><div class="check-title">Complete any service plan requirements and obtain written proof of completion</div><div class="check-note">Certificates, attendance records, counsellor letters — collect all of it. Compliance with a service plan is one of the strongest things you can show a court.</div><span class="check-tag urgent">IMPORTANT</span></div></label>
+        <label class="check-item" id="ci-p5-2"><input type="checkbox"><div class="check-body"><div class="check-title">Prepare a written parenting capacity statement — your plan going forward</div><div class="check-note">A concrete, specific plan showing what you've done, what you've learned, and what your support system looks like demonstrates insight and commitment.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p5-3"><input type="checkbox"><div class="check-body"><div class="check-title">Review all access visit notes — dispute inaccuracies in writing promptly</div><div class="check-note">If CAS's notes of a visit don't reflect what actually happened, respond in writing within days — not weeks. Delays look like acceptance.</div><span class="check-tag legal">LEGAL</span></div></label>
+        <label class="check-item" id="ci-p5-4"><input type="checkbox"><div class="check-body"><div class="check-title">Have a final pre-hearing meeting with your lawyer — go over every line of every affidavit</div><div class="check-note">Don't go into a hearing with questions. Know exactly what each document says, what your lawyer's strategy is, and what outcome you're aiming for.</div><span class="check-tag urgent">IMPORTANT</span></div></label>
+        <label class="check-item" id="ci-p5-5"><input type="checkbox"><div class="check-body"><div class="check-title">Arrange childcare, transportation, and time off work for your hearing date</div><div class="check-note">Practical barriers have derailed parents. Confirm logistics two weeks out. Missing a hearing has serious consequences.</div><span class="check-tag urgent">IMPORTANT</span></div></label>
+        <label class="check-item" id="ci-p5-6"><input type="checkbox"><div class="check-body"><div class="check-title">Dress professionally and arrive at court 30 minutes early</div><div class="check-note">First impressions in court matter. Conservative, professional dress. No phones visible. Be respectful to everyone — including CAS workers.</div><span class="check-tag urgent">IMPORTANT</span></div></label>
+      </div>
+      <div class="section-break"></div>
+      <div class="script-box">
+        <div class="script-label">Parenting capacity statement — structure to follow</div>
+        "I understand the concerns that were raised about [specific concern]. Since [date], I have taken the following steps: [list specific actions]. I have completed [programs]. I have maintained [stability factors]. I understand my responsibilities as a parent and I'm committed to continued growth. My support system includes [people]. My plan going forward is [concrete plan]."
+      </div>
+    </div>
+
+    <!-- PHASE 6 -->
+    <div class="panel" id="panel-phase6">
+      <div class="phase-header">
+        <div class="phase-badge blue">📌 Ongoing</div>
+        <div class="phase-title">Long-Term Defense Foundation</div>
+        <div class="phase-desc">The 45 days are a sprint. What you build after them is the marathon. CAS cases rarely end at Day 45 — protect yourself for the long run.</div>
+      </div>
+      <div class="checklist">
+        <label class="check-item" id="ci-p6-1"><input type="checkbox"><div class="check-body"><div class="check-title">Keep ALL written communications with CAS — never delete anything</div><div class="check-note">Create a dedicated email folder. Screenshot texts. Print and file paper letters. Cases can drag for years — old communications resurface.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p6-2"><input type="checkbox"><div class="check-body"><div class="check-title">Never communicate with CAS by phone alone — always follow up in writing</div><div class="check-note">"As per our call today, I want to confirm that [what was discussed]." Email creates a timestamp and a record that can't be disputed.</div><span class="check-tag document">DOCUMENT</span></div></label>
+        <label class="check-item" id="ci-p6-3"><input type="checkbox"><div class="check-body"><div class="check-title">Attend every access visit, every court date, every required appointment</div><div class="check-note">Consistency is evidence of parental commitment. Absence, even with reason, is used against you. Show up every single time.</div><span class="check-tag urgent">IMPORTANT</span></div></label>
+        <label class="check-item" id="ci-p6-4"><input type="checkbox"><div class="check-body"><div class="check-title">Know your court dates and file number — set phone reminders for everything</div><div class="check-note">Write your file number here: ___________. Missing a date because "I forgot" is not accepted. Set multiple reminders.</div><span class="check-tag legal">LEGAL</span></div></label>
+        <label class="check-item" id="ci-p6-5"><input type="checkbox"><div class="check-body"><div class="check-title">Connect with other Ontario parents navigating CYFSA — find community and peer support</div><div class="check-note">You are not alone. Parent advocacy groups, Legal Aid Ontario, and community legal clinics all offer support. Use them.</div><span class="check-tag urgent">IMPORTANT</span></div></label>
+        <label class="check-item" id="ci-p6-6"><input type="checkbox"><div class="check-body"><div class="check-title">Protect your mental health — this is a marathon, not a sprint</div><div class="check-note">Anxiety, depression, and crisis responses are normal. Counselling is not a weakness — it's evidence of insight. Your wellbeing is part of your parenting capacity.</div><span class="check-tag urgent">IMPORTANT</span></div></label>
+      </div>
+      <div class="section-break"></div>
+      <div class="info-box">
+        <strong>Emergency numbers to have saved:</strong><br>
+        Legal Aid Ontario: 1-800-668-8258<br>
+        Lawyer Referral Service: 1-855-947-5255<br>
+        Community Legal Education Ontario: 1-855-255-7256
+      </div>
+    </div>
+
+  </div><!-- end app-body -->
+</div><!-- end #app -->
+
+<script>
+// ── UNLOCK CODE ── Change this to whatever code you give buyers
+const UNLOCK_CODE = 'PARENT45';
+const STORAGE_KEY = 'opd_roadmap_unlocked';
+
+// Check if already unlocked
+if(localStorage.getItem(STORAGE_KEY) === 'true') showApp();
+
+function openModal(){
+  document.getElementById('modalBg').classList.add('open');
+  setTimeout(()=>document.getElementById('codeInput').focus(),100);
+}
+function closeModal(){
+  document.getElementById('modalBg').classList.remove('open');
+  document.getElementById('unlockErr').style.display='none';
+}
+function copyEmail(el){
+  navigator.clipboard.writeText(el.textContent.trim()).then(()=>{
+    const orig=el.textContent;
+    el.textContent='Copied!';
+    setTimeout(()=>el.textContent=orig,1500);
+  });
+}
+function tryUnlock(){
+  const val=document.getElementById('codeInput').value.trim().toUpperCase();
+  if(val===UNLOCK_CODE){
+    localStorage.setItem(STORAGE_KEY,'true');
+    closeModal();
+    showApp();
+  } else {
+    document.getElementById('unlockErr').style.display='block';
+    document.getElementById('codeInput').style.borderColor='var(--red)';
+    setTimeout(()=>document.getElementById('codeInput').style.borderColor='',1500);
+  }
+}
+function showApp(){
+  document.getElementById('landing').style.display='none';
+  document.getElementById('app').style.display='block';
+  initChecks();
+}
+function backToLanding(){
+  document.getElementById('app').style.display='none';
+  document.getElementById('landing').style.display='block';
+}
+
+// ── CHECKBOX PERSISTENCE ──
+function initChecks(){
+  const all=document.querySelectorAll('.check-item input[type=checkbox]');
+  all.forEach(cb=>{
+    const id=cb.closest('.check-item').id;
+    if(localStorage.getItem(id)==='true'){cb.checked=true;cb.closest('.check-item').classList.add('done')}
+    cb.addEventListener('change',()=>{
+      localStorage.setItem(id,cb.checked);
+      cb.closest('.check-item').classList.toggle('done',cb.checked);
+      updateProgress();
+    });
+  });
+  updateProgress();
+}
+function updateProgress(){
+  const all=document.querySelectorAll('.check-item input[type=checkbox]');
+  const done=Array.from(all).filter(c=>c.checked).length;
+  const pct=Math.round((done/all.length)*100);
+  const day=Math.round((pct/100)*45);
+  document.getElementById('progFill').style.width=pct+'%';
+  document.getElementById('progTxt').textContent=pct+'% complete';
+  document.getElementById('dayDisplay').textContent='Day '+day+' of 45';
+}
+function switchTab(id,btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
