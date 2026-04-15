@@ -22,6 +22,10 @@ body {
 /* PAGE HEADER */
 .page-header {
     margin-bottom: 25px;
+}/* HIGHLIGHT BOX */
+.highlight {
+    background: #EFF6FF;
+    border-left: 6px solid #3B82F6;
 }
 
 .page-header h1 {
