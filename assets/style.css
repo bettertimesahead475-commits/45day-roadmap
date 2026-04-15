@@ -1,4 +1,4 @@
-/* GLOBAL RESETS */
+* GLOBAL RESETS */
 * {
     margin: 0;
     padding: 0;
@@ -107,4 +107,8 @@ body {
     border-left: 4px solid #3B82F6;
     padding-left: 10px;
     margin-bottom: 12px;
+}
+/* SOFT CARD DIVIDERS */
+.card {
+    border: 1px solid #E5E7EB;
 }
